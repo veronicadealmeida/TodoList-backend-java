@@ -1,5 +1,6 @@
 package edu.vda.TodoList.user;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +23,12 @@ public class UserController {
 
         if (user != null) {
             System.out.println("Uauário já existe");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuário já eciste");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuário já existe");
         }
+
+        var passwordHashred = BCrypt.withDefaults().hashToString(12, userModel.getPassword().toCharArray());
+
+        userModel.setPassword(passwordHashred);
         var userCreated =  this.repository.save(userModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(userCreated);
     }
