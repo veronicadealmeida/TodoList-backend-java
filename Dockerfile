@@ -12,6 +12,6 @@ FROM openjdk:17-jdk-slim
 
 EXPOSE 9081
 
-COPY --from=build /target/TodoList-0.0.1-SNAPSHOT.jar
+COPY --from=build /target/todolist-0.0.1-snapshot.jar
 
 ENTRYPOINT [ "java", "-jar", "app.jar"]
