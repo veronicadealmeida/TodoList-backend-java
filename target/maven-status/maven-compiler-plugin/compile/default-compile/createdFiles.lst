@@ -1,0 +1,10 @@
+edu\vda\TodoList\user\UserRepository.class
+edu\vda\TodoList\TodoListApplication.class
+edu\vda\TodoList\user\UserController.class
+edu\vda\TodoList\user\UserModel.class
+edu\vda\TodoList\task\TaskModel.class
+edu\vda\TodoList\task\TaskRepository.class
+edu\vda\TodoList\erros\ExceptionHandlerController.class
+edu\vda\TodoList\filter\FilterTaskAuth.class
+edu\vda\TodoList\utils\Utils.class
+edu\vda\TodoList\task\TaskController.class
