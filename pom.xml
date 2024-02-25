@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.vda</groupId>
-	<artifactId>TodoList</artifactId>
-	<version>1.0.0</version>
+	<artifactId>todolist</artifactId>
+	<version>0</version>
 	<packaging>jar</packaging>
 	<name>TodoList</name>
 	<description>Demo project for Spring Boot</description>
